@@ -1,11 +1,8 @@
 from NXController import Controller
 import time
 
-ctr = Controller()
-
-WattCollect()
-
 # 瓦特收集
+
 
 def WattCollect():
     # 站在洞前
@@ -62,3 +59,11 @@ def WattCollect():
     ctr.A()
     ctr.A()
     ctr.A()
+
+    print("成功領取 2000W")
+
+
+if __name__ == "__main__":
+    ctr = Controller()
+
+    WattCollect()
