@@ -63,12 +63,11 @@ def WattCollect():
     print("成功領取 2000W")
 
 
-if __name__ == "__main__":
-    ctr = Controller()
+ctr = Controller()
 
-    print("{}搜尋控制器{}".format("=" * 5, "=" * 5))
-    ctr.L(2)
-    ctr.R(2)
+print("{}搜尋控制器{}".format("=" * 5, "=" * 5))
+ctr.L(2)
+ctr.R(2)
 
-    print("{}開始執行程式{}".format("=" * 5, "=" * 5))
-    WattCollect()
+print("{}開始執行程式{}".format("=" * 5, "=" * 5))
+WattCollect()
