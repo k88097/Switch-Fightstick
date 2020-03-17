@@ -33,7 +33,7 @@ def WattCollect(count):
     ctr.A()
 
     #到調整時間選項
-    ctr.d(0.3)
+    ctr.d(0.6)
     ctr.A()
 
     #調整時間加一天
@@ -69,14 +69,17 @@ def WattCollect(count):
 
 # 存檔
 def save():
+    print("存檔中...")
     ctr.B()
-    time.sleep(0.3)
+    time.sleep(1.5)
     ctr.X()
-    time.sleep(0.3)
+    time.sleep(0.6)
     ctr.R()
-    time.sleep(0.3)
+    time.sleep(1)
     ctr.A()
-    time.sleep(2)
+    time.sleep(3.2)
+    print("存檔完畢")
+    ctr.A()
 
 
 if __name__ == "__main__":
@@ -93,6 +96,8 @@ if __name__ == "__main__":
     while (count < goal):
         count += 1
         WattCollect(count)
+
+    time.sleep(1.8)
     save()
 
     ctr.close()
