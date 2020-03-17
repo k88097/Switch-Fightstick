@@ -9,13 +9,13 @@
 - 杜邦線 公-母 5條
 
 ## 選配物品
-- USB TO TYPE C 轉接頭
+- Usb to Type-C 轉接頭
 
 ## 注意事項
-- 如果有 **USB TO TYPE C 轉接頭** 的話就不需要Switch Dock
+- 如果有 **Usb to Type-C 轉接頭** 的話就不需要 Switch Dock
 
 ## 使用方法
-- 燒錄 **Joystick.hex** 進入 Arduino
+- 燒錄 **[Joystick.hex](https://github.com/k88097/Switch-Fightstick/blob/master/Joystick.hex)** 進入 Arduino
 - USB to TTL 接法:  
 		5V -> 5V  
 		GND -> GND  
@@ -26,7 +26,7 @@
 - 使用 **example** 中的程式控制 **Switch**
 
 ## 程式功能說明 
-**所有範例程式僅限適用於繁體中文版(CHT)與主機語言為中文。**
+**所有[範例程式](https://github.com/k88097/Switch-Fightstick/tree/master/example)僅限適用於遊戲為繁體中文版(CHT)與主機語言為中文。**
 |程式檔名|功能說明|
 |:---:|:---:|
 |**Simple_example** | 連續按 10次 A鍵|
