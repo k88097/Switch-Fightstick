@@ -56,9 +56,9 @@ def WattCollect():
     time.sleep(2)
 
     # 領取瓦特
-    ctr.A()
-    ctr.A()
-    ctr.A()
+    ctr.A(0.3)
+    ctr.A(0.3)
+    ctr.A(0.3)
 
     print("成功領取 2000W")
 
