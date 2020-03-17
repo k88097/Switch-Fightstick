@@ -66,4 +66,7 @@ def WattCollect():
 if __name__ == "__main__":
     ctr = Controller()
 
+    ctr.A()
+    time.sleep(2)
+
     WattCollect()
