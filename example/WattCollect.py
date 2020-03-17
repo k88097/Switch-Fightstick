@@ -74,34 +74,37 @@ def WattCollect(year, month, day):
     time.sleep(0.3)
     print("成功領取 2000W")
 
-    def NTime():
-        # 一般模式
-        #調整時間加一天
-        ctr.r()
-        ctr.r()
-        ctr.u()
-        ctr.r()
-        ctr.r()
-        ctr.r()
-        ctr.A()
 
-    def NextMonth():
-        # 下一個月模式
-        #調整時間加一天
-        ctr.r()
-        ctr.u()
-        ctr.r()
-        ctr.u()
-        ctr.r()
-        ctr.r()
-        ctr.r()
-        ctr.A()
+def NTime():
+    # 一般模式
+    #調整時間加一天
+    ctr.r()
+    ctr.r()
+    ctr.u()
+    ctr.r()
+    ctr.r()
+    ctr.r()
+    ctr.A()
 
-    def NextYear():
-        # 下一年模式
-        #調整時間加一天
-        ctr.u()
-        NextMonth()
+
+def NextMonth():
+    # 下一個月模式
+    #調整時間加一天
+    ctr.r()
+    ctr.u()
+    ctr.r()
+    ctr.u()
+    ctr.r()
+    ctr.r()
+    ctr.r()
+    ctr.A()
+
+
+def NextYear():
+    # 下一年模式
+    #調整時間加一天
+    ctr.u()
+    NextMonth()
 
 
 if __name__ == "__main__":
