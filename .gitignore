@@ -1,0 +1,10 @@
+__pycache__/
+.DS_Store
+*.d
+*.o
+*.bin
+*.elf
+*.lss
+*.map
+*.sym
+*.eep
