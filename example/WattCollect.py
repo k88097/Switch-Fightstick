@@ -3,7 +3,7 @@ import time
 
 
 # 瓦特收集
-def WattCollect():
+def WattCollect(year, month, day):
     # 站在洞前
     # ctr.A()
     # time.sleep(0.5)
@@ -121,6 +121,5 @@ if __name__ == "__main__":
         max_day = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
         if year % 4 == 0:
             max_day[1] = 29
-
-        WattCollect()
+        WattCollect(year, month, day)
     ctr.close()
