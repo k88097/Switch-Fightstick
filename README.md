@@ -15,6 +15,7 @@
 - 如果有 **Usb to Type-C 轉接頭** 的話就不需要 Switch Dock
 
 ## 使用方法
+- 利用 **1條公對公杜邦線** 進入 **DFU模式** (兩頭分別接觸 **GND** 和 **REAST**)
 - 燒錄 **[Joystick.hex](https://github.com/k88097/Switch-Fightstick/blob/master/Joystick.hex)** 進入 Arduino
 - USB to TTL 接法:  
 		5V -> 5V  
@@ -32,3 +33,4 @@
 |**Simple_example** | 連續按 10次 A鍵|
 |**Fossil** | 自動復活化石|
 |**Hatching_egg_on_5_road**|自動取蛋(僅限五號道路)|
+|**WattCollect**|瓦特自動領取|
