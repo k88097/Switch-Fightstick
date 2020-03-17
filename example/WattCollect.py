@@ -34,7 +34,9 @@ def WattCollect(count):
 
     #到調整時間選項
     ctr.d()
+    time.sleep(0.1)
     ctr.d()
+    time.sleep(0.1)
     ctr.A()
 
     #調整時間加一天
