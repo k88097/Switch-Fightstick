@@ -64,8 +64,9 @@ def WattCollect(count):
     ctr.A()
     time.sleep(0.3)
     ctr.A()
-    time.sleep(0.3)
+    time.sleep(0.4)
     print("[%d] 領取 2000w" % count)
+
 
 # 存檔
 def save():
@@ -96,6 +97,10 @@ if __name__ == "__main__":
     while (count < goal):
         count += 1
         WattCollect(count)
+        
+        if count % 100 == 0:
+            time.sleep(1.8)
+            save()
 
     time.sleep(1.8)
     save()
