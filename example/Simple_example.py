@@ -9,5 +9,4 @@ ctr = Controller()
 
 for i in range (10):
 	ctr.A()
-	time.sleep(1)
 ctr.close()
