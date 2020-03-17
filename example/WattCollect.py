@@ -66,7 +66,9 @@ def WattCollect():
 if __name__ == "__main__":
     ctr = Controller()
 
-    ctr.A()
-    time.sleep(2)
+    print("{}搜尋控制器{}".format("=" * 5, "=" * 5))
+    ctr.L(2)
+    ctr.R(2)
 
+    print("{}開始執行程式{}".format("=" * 5, "=" * 5))
     WattCollect()
