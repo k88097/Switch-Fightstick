@@ -15,6 +15,7 @@ if __name__ == "__main__":
     time.sleep(2)
 
     print("{}開始執行程式{}".format("=" * 5, "=" * 5))
+    print("挖礦中")
     while True:
         Dugging()
 

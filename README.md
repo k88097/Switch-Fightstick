@@ -27,7 +27,9 @@
 - 使用 **example** 中的程式控制 **Switch**
 
 ## 程式功能說明 
-**所有[範例程式](https://github.com/k88097/Switch-Fightstick/tree/master/example)僅限適用於遊戲為繁體中文版(CHT)與主機語言為中文。**
+- **所有[範例程式](https://github.com/k88097/Switch-Fightstick/tree/master/example)僅限適用於遊戲為繁體中文版(CHT)與主機語言為中文。**
+- 所有腳本皆在 **TV模式** 下經過測試，掌機模式效能可能有所不同，導致執行狀況也不同。
+
 |程式檔名|功能說明|
 |:---:|:---:|
 |**Simple_example** | 連續按 10次 A鍵|
@@ -35,3 +37,4 @@
 |**Hatching_egg_on_5_road**|自動取蛋(僅限五號道路)|
 |**WattCollect**|瓦特自動領取|
 |**Dugging**|自動挖礦|
+|**Change_day**|自動換日(月份請選擇有31天的月份)|
