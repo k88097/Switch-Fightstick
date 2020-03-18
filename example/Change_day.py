@@ -107,11 +107,16 @@ if __name__ == "__main__":
         count += 30
 
         isSaved = change_day(isSaved)
-        print("還剩下 %d 天到指定天數。" % (goal - count))
+        if not count == goal:
+            print("[%s] 還剩下 %d 天。" %
+                  (time.strftime("%H:%M:%S", time.localtime()),
+                   (goal - count)))
 
         # 每300天回去存檔一次
         if count % 300 == 0:
             time.sleep(1.8)
             isSaved = save(isSaved)
+
+    print("[%s] 已達目標天數。" % time.strftime("%H:%M:%S", time.localtime()))
 
     ctr.close()
