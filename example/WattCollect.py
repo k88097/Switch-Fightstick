@@ -81,6 +81,7 @@ def save():
     time.sleep(3.2)
     print("存檔完畢")
     ctr.A()
+    time.sleep(1)
 
 
 if __name__ == "__main__":
@@ -97,12 +98,13 @@ if __name__ == "__main__":
     while (count < goal):
         count += 1
         WattCollect(count)
-        
+
         if count % 100 == 0:
             time.sleep(1.8)
             save()
 
-    time.sleep(1.8)
-    save()
+    if not count % 100 == 0:
+        time.sleep(1.8)
+        save()
 
     ctr.close()

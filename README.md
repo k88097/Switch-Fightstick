@@ -34,3 +34,4 @@
 |**Fossil** | 自動復活化石|
 |**Hatching_egg_on_5_road**|自動取蛋(僅限五號道路)|
 |**WattCollect**|瓦特自動領取|
+|**Dugging**|自動挖礦|
