@@ -10,3 +10,4 @@ __pycache__/
 *.eep
 test.py
 example.py
+.vscode/

@@ -28,7 +28,7 @@ def change_day(isSaved):
         c += 1
         # 快速過日
         ctr.A()
-        time.sleep(0.1)
+        # time.sleep(0.1)
         ctr.l()
         ctr.l()
         ctr.l()
