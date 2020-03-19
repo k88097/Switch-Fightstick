@@ -7,18 +7,18 @@ def change_day(isSaved):
     c = 0
 
     if isSaved:
-        c = 1
+        c += 1
         # 第一次過日
         # 過日，點選時間
         ctr.A()
 
         #跳到 "日"，並且加一天
-        ctr.r()
-        ctr.r()
-        ctr.u()
-        ctr.A()
-        ctr.A()
-        ctr.A()
+        ctr.r(0.05)
+        ctr.r(0.05)
+        ctr.u(0.05)
+        ctr.A(0.05)
+        ctr.A(0.05)
+        ctr.A(0.05)
         ctr.A()
 
         isSaved = False
@@ -29,13 +29,13 @@ def change_day(isSaved):
         # 快速過日
         ctr.A()
         # time.sleep(0.1)
-        ctr.l()
-        ctr.l()
-        ctr.l()
-        ctr.u()
-        ctr.A()
-        ctr.A()
-        ctr.A()
+        ctr.l(0.05)
+        ctr.l(0.05)
+        ctr.l(0.05)
+        ctr.u(0.05)
+        ctr.A(0.05)
+        ctr.A(0.05)
+        ctr.A(0.05)
         ctr.A()
         # time.sleep(0.3)
     return isSaved
@@ -99,7 +99,7 @@ if __name__ == "__main__":
     time.sleep(2)
 
     print("{}開始執行程式{}".format("=" * 5, "=" * 5))
-    print("刷時間中...")
+    print("[%s] 刷時間中..." % time.strftime("%H:%M:%S", time.localtime()))
 
     # isSaved = save(isSaved)
 
@@ -114,7 +114,7 @@ if __name__ == "__main__":
 
         # 每300天回去存檔一次
         if count % 300 == 0:
-            time.sleep(1.8)
+            time.sleep(1.5)
             isSaved = save(isSaved)
 
     print("[%s] 已達目標天數。" % time.strftime("%H:%M:%S", time.localtime()))
