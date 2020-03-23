@@ -37,5 +37,5 @@
 |**Hatching_egg_on_5_road**|自動取蛋(僅限五號道路)|
 |**WattCollect**|瓦特自動領取|
 |**Dugging**|自動挖礦|
-|**Change_day**|自動換日(月份請選擇有31天的月份)|
-|**Trade**|自動傳送寶可夢(一次傳一箱)|
+|**Change_day**|自動換日|
+|**Trade**|自動傳送寶可夢|
