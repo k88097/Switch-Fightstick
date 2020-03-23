@@ -74,14 +74,14 @@ def save(isSaved):
     time.sleep(1.6)
 
     # 存檔，並且回到主畫面
-    print("存檔中...")
+    print("[*] 存檔中...")
     ctr.X()
     time.sleep(0.6)
     ctr.R()
     time.sleep(1)
     ctr.A()
     time.sleep(3.2)
-    print("存檔完畢")
+    print("[*] 存檔完畢。")
     ctr.h()
     time.sleep(0.3)
 
