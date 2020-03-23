@@ -6,7 +6,8 @@ def Trade(goal):
     count = 0
     while count < goal:
         count += 1
-        print("第{}隻，傳送中...".format(count))
+        print("[{}] 第{}隻，傳送中...".format(
+            time.strftime("%H:%M:%S", time.localtime()), count))
 
         ctr.A()
         time.sleep(0.8)

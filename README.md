@@ -16,7 +16,7 @@
 
 ## 使用方法
 - 利用 **1條公對公杜邦線** 進入 **DFU模式** (兩頭分別接觸 **GND** 和 **REAST**)
-- 燒錄 **[Joystick.hex](https://github.com/k88097/Switch-Fightstick/blob/master/Joystick.hex)** 進入 Arduino
+- 燒錄 **[Joystick.hex](https://github.com/k88097/Switch-Fightstick/blob/master/Joystick.hex)** 進入 Arduino UNO R3
 - USB to TTL 接法:  
 		5V -> 5V  
 		GND -> GND  
