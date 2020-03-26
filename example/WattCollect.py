@@ -36,8 +36,7 @@ def WattCollect(ctr, current_date):
     ctr.A()
 
     #到調整時間選項
-    ctr.d(0.05)
-    ctr.d(0.05)
+    ctr.d(0.6)
     ctr.A()
 
     # 調整時間加一天
