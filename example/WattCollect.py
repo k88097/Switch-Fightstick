@@ -116,7 +116,7 @@ if __name__ == "__main__":
         count += 1
         current_date = WattCollect(ctr, current_date)
         print("[%s] [%d] 領取 2000w。" %
-              (current_date.strftime("%Y-%m-%d", count)))
+              (current_date.strftime("%Y-%m-%d"), count))
 
         if count % 100 == 0:
             time.sleep(1.8)
