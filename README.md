@@ -39,3 +39,4 @@
 |**Dugging**|自動挖礦|
 |**Change_day**|自動換日|
 |**Trade**|自動傳送寶可夢|
+|**Over_3days**|刷D點|

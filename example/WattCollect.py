@@ -1,13 +1,12 @@
 from NXController import Controller
-import time
-import datetime
+import time, datetime
 
 
 # 瓦特收集
 def WattCollect(ctr, current_date):
     tommorrow = current_date + datetime.timedelta(days=1)
 
-    # 站在洞前
+    # 極巨戰主頁
     ctr.A()
     time.sleep(2)
     ctr.B()
@@ -116,7 +115,8 @@ if __name__ == "__main__":
     while count < goal:
         count += 1
         current_date = WattCollect(ctr, current_date)
-        print("[%s] 領取 2000w" % current_date.strftime("%Y-%m-%d"))
+        print("[%s] [%d] 領取 2000w。" %
+              (current_date.strftime("%Y-%m-%d", count)))
 
         if count % 100 == 0:
             time.sleep(1.8)

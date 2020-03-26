@@ -11,52 +11,54 @@ def change_day(ctr, isSaved, current_date):
         # 過日，點選時間
         ctr.A()
 
+        #跳到 "日"，並且加一天
+        ctr.r(0.05)
+        ctr.r(0.05)
+        ctr.u(0.05)
+
         # 當年的最後一天
         if current_date.month == 12 and current_date.day == 31:
             #加 年月日
-            ctr.u(0.05)
-            ctr.r(0.05)
-            ctr.u(0.05)
-            ctr.r(0.05)
-            ctr.u(0.05)
+            for i in range(2):
+                ctr.l(0.05)
+                ctr.u(0.05)
+            ctr.A(0.05)
+            ctr.A(0.05)
+        # 月份最後一天
         elif not current_date.month == tommorrow.month:
             #加 月日
-            ctr.r(0.05)
+            ctr.l(0.05)
             ctr.u(0.05)
-            ctr.r(0.05)
-            ctr.u(0.05)
-        else:
-            #跳到 "日"，並且加一天
-            ctr.r(0.05)
-            ctr.r(0.05)
-            ctr.u(0.05)
-
-            isSaved = False
+            ctr.A(0.05)
 
         ctr.A(0.05)
         ctr.A(0.05)
         ctr.A(0.05)
         ctr.A()
+        isSaved = False
 
     else:
         # 點選時間
         ctr.A()
 
+        # 加一天
         for i in range(3):
             ctr.l(0.05)
+        ctr.u(0.05)
 
+        # 當年最後一天
         if current_date.month == 12 and current_date.day == 31:
             for i in range(2):
                 ctr.l(0.05)
-            for i in range(2):
                 ctr.u(0.05)
-                ctr.r(0.05)
+            ctr.A(0.05)
+            ctr.A(0.05)
+        # 當月最後一天
         elif not current_date.month == tommorrow.month:
             ctr.l(0.05)
             ctr.u(0.05)
-            ctr.r(0.05)
+            ctr.A(0.05)
 
-        ctr.u(0.05)
         ctr.A(0.05)
         ctr.A(0.05)
         ctr.A(0.05)
