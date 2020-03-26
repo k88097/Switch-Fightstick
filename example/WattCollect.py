@@ -40,19 +40,19 @@ def WattCollect(ctr, current_date):
     ctr.A()
 
     # 調整時間加一天
+    ctr.A(0.05)
+    ctr.A(0.05)
+    ctr.u(0.05)
     if current_date.month == 12 and current_date.day == 31:
-        for i in range(3):
-            ctr.u(0.05)
-            ctr.A(0.05)
-    elif not current_date.month == tommorrow.month:
-        ctr.A(0.05)
         for i in range(2):
+            ctr.l(0.05)
             ctr.u(0.05)
-            ctr.A(0.05)
-    else:
         ctr.A(0.05)
         ctr.A(0.05)
+    elif not current_date.month == tommorrow.month:
+        ctr.l(0.05)
         ctr.u(0.05)
+        ctr.A(0.05)
     ctr.A(0.05)
     ctr.A(0.05)
     ctr.A(0.05)
