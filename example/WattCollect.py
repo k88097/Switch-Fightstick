@@ -79,7 +79,6 @@ def WattCollect(ctr, current_date):
     time.sleep(0.3)
     ctr.A()
     time.sleep(0.4)
-    print("[%d] 領取 2000w" % count)
     return tommorrow
 
 
@@ -117,6 +116,7 @@ if __name__ == "__main__":
     while count < goal:
         count += 1
         current_date = WattCollect(ctr, current_date)
+        print("[%s] 領取 2000w" % current_date.strftime("%Y-%m-%d"))
 
         if count % 100 == 0:
             time.sleep(1.8)
