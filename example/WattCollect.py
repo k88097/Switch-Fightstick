@@ -15,21 +15,21 @@ def WattCollect(count):
     time.sleep(0.5)
 
     # 到設定畫面
-    ctr.d()
-    ctr.r()
-    ctr.r()
-    ctr.r()
-    ctr.r()
-    ctr.A()
+    ctr.d(0.05)
+    ctr.r(0.05)
+    ctr.r(0.05)
+    ctr.r(0.05)
+    ctr.r(0.05)
+    ctr.A(0.05)
     time.sleep(0.3)
 
     # 到設定時間畫面
     ctr.d(1.8)
     ctr.A()
-    ctr.d()
-    ctr.d()
-    ctr.d()
-    ctr.d()
+    ctr.d(0.05)
+    ctr.d(0.05)
+    ctr.d(0.05)
+    ctr.d(0.05)
     ctr.A()
 
     #到調整時間選項
@@ -37,12 +37,12 @@ def WattCollect(count):
     ctr.A()
 
     #調整時間加一天
-    ctr.r()
-    ctr.r()
-    ctr.u()
-    ctr.r()
-    ctr.r()
-    ctr.r()
+    ctr.r(0.05)
+    ctr.r(0.05)
+    ctr.u(0.05)
+    ctr.A(0.05)
+    ctr.A(0.05)
+    ctr.A(0.05)
     ctr.A()
 
     # 回到主畫面並且進入遊戲
@@ -87,12 +87,11 @@ def save():
 if __name__ == "__main__":
     ctr = Controller()
 
-    goal = int(input("輸入次數："))
-    count = 0
-
     print("{}搜尋控制器{}".format("=" * 5, "=" * 5))
     ctr.LR()
-    time.sleep(2)
+
+    goal = int(input("輸入次數："))
+    count = 0
 
     print("{}開始執行程式{}".format("=" * 5, "=" * 5))
     while (count < goal):
