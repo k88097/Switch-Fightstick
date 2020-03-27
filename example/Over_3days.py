@@ -124,11 +124,11 @@ if __name__ == "__main__":
 
     while isAgain:
         ans = input("是否重刷 [Y/n]：")
-    if len(ans) == 0:
-        current_date, isFirst = over_3days(ctr, current_date, isFirst)
-    else:
-        ord_ans = ord(ans[:1])
-        if ord_ans == 89 or ord_ans == 121:
+        if len(ans) == 0:
             current_date, isFirst = over_3days(ctr, current_date, isFirst)
         else:
-            isAgain = False
+            ord_ans = ord(ans[:1])
+            if ord_ans == 89 or ord_ans == 121:
+                current_date, isFirst = over_3days(ctr, current_date, isFirst)
+            else:
+                isAgain = False
