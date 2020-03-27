@@ -2,23 +2,10 @@ from NXController import Controller
 import time, datetime
 
 
-def over_3days(ctr, current_day, isFirst):
+def over_3days(ctr, current_date, isFirst):
     # 如果不是第一次執行程式
     if not isFirst:
-        # 關閉遊戲
-        ctr.h(0.5)
-        ctr.X()
-        ctr.A()
-        time.sleep(2)
-
-        # 打開遊戲
-        ctr.A()
-        ctr.A()
-        time.sleep(14)
-        ctr.A()
-        time.sleep(7)
-        ctr.A()
-        isFirst = False
+        Restart_game(ctr)
 
     for i in range(3):
         tommorrow = current_date + datetime.timedelta(days=1)
@@ -96,7 +83,34 @@ def over_3days(ctr, current_day, isFirst):
         ctr.A()
         time.sleep(0.4)
 
-    return tommorrow, isFirst
+        current_date = tommorrow
+
+    isFirst = False
+    print("目前日期：%s" % current_date.strftime("%Y-%m-%d"))
+    return current_date, isFirst
+
+
+def Restart_game(ctr):
+    # 關閉遊戲
+    ctr.h()
+    time.sleep(1)
+    ctr.X()
+    time.sleep(1)
+    ctr.A()
+    time.sleep(3)
+
+    # 打開遊戲
+    ctr.A()
+    time.sleep(1)
+    ctr.A()
+    print("進入遊戲畫面")
+    time.sleep(16)
+    print("點擊A")
+    ctr.A()
+    time.sleep(9)
+    print("進到遊戲")
+    ctr.A()
+    time.sleep(1)
 
 
 def isAgain(isAgain):
@@ -131,4 +145,5 @@ if __name__ == "__main__":
             if ord_ans == 89 or ord_ans == 121:
                 current_date, isFirst = over_3days(ctr, current_date, isFirst)
             else:
+                ctr.close()
                 isAgain = False
