@@ -4,6 +4,28 @@ import time, datetime
 
 # 過日
 def change_day(ctr, isSaved, current_date):
+    # 判斷目前日期是否為主機的最大天數
+    if current_date.year == 2060 and current_date.month == 12 and current_date.day == 31:
+        ctr.A()
+        # 將目前時間調至 2000/1/1
+        if not isSaved:
+            for i in range(5):
+                ctr.l(0.05)
+        else:
+            isSaved = False
+
+        ctr.d(5.5)
+        for i in range(2):
+            ctr.A(0.05)
+            ctr.u(0.05)
+
+        for i in range(3):
+            ctr.A(0.05)
+        ctr.A()
+
+        # 目前時間改為 2000/1/1
+        current_date = datetime.datetime(2000, 1, 1)
+
     tommorrow = current_date + datetime.timedelta(days=1)
 
     if isSaved:
@@ -137,9 +159,9 @@ if __name__ == "__main__":
 
         isSaved, current_date = change_day(ctr, isSaved, current_date)
         if count % 30 == 0 and not count == goal:
-            print("[%s] 還剩下 %d 天。" %
+            print("[%s]\n[%s] 還剩下 %d 天。" %
                   (time.strftime("%H:%M:%S", time.localtime()),
-                   (goal - count)))
+                   current_date.strftime("%Y-%m-%d"), (goal - count)))
 
         # 每300天回去存檔一次
         if count % 300 == 0:

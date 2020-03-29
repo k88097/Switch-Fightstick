@@ -3,17 +3,18 @@ import time
 
 
 def Trade(ctr, count, goal):
-    print("[{}] 第{}隻，傳送中...".format(
-        time.strftime("%H:%M:%S", time.localtime()), count))
+    print("[{}] 第{}隻，準備傳送。".format(time.strftime("%H:%M:%S", time.localtime()),
+                                   count))
 
     ctr.A()
     time.sleep(0.8)
     ctr.A()
     time.sleep(3.6)
+    print("[{}] 開始傳送...".format(time.strftime("%H:%M:%S", time.localtime())))
     ctr.A()
-    time.sleep(40)
+    time.sleep(45)
 
-    if count % 5 != 0:
+    if count % 5 != 0 and not count == goal:
         ctr.d()
         time.sleep(0.5)
     elif count % 30 == 0:
@@ -30,7 +31,8 @@ def Trade(ctr, count, goal):
         ctr.r()
         time.sleep(0.5)
 
-    print("第 %d 隻傳送完畢。")
+    print("[{}] 第 {} 隻傳送完畢。".format(
+        time.strftime("%H:%M:%S", time.localtime()), count))
 
 
 def getGoal():
@@ -45,7 +47,7 @@ def getGoal():
 
 if __name__ == "__main__":
     ctr = Controller()
-    
+
     print("{}搜尋控制器{}".format('=' * 5, '=' * 5))
     ctr.Y()
 
